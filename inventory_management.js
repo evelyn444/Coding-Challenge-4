@@ -20,3 +20,13 @@ console.log(`Price: $${product.price}`);
 console.log(`Quantity that is In Stock: ${product.quantity}`);
 console.log(`Stock Status: ${stocklevel}`); // logs product details and stock status
 
+
+// Task 3: Create a Function to Update Product Stock After Sales
+function updateStock (product, unitsSold) {
+let leftoverStock = product.quantity - unitsSold;
+if (leftoverStock === 0)
+    return ( `${product.name} Is out of stock` );
+else if (leftoverStock <= product.lowStockLevel)
+    return(`${product.name} Has low stock`); // returning low stock or out of stock for a product
+}
+console.log(updateStock (`Blush`, 2)); // checking with product "Blush"
