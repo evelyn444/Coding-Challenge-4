@@ -8,7 +8,7 @@ const inventory = [
 
 ];
 //Task 2: Create a Function to Display Product Details
-function displayProductDetails() {
+function displayProductDetails(product) {
     let stocklevel;
     if(product.quantity <= product.lowStockLevel)
         {stocklevel = 'Low Stock'}
@@ -34,7 +34,15 @@ console.log(updateStock (`Blush`, 2)); // checking with product "Blush"
 //Task 4: Create a Function to Check Low Stock Products
 function checkLowStock () {
     let currentinventory = inventory.filter (product => product.quantity <= product.lowStockLevel);
-    currentinventory.forEach(object => console.log(object.name));
+    currentinventory.forEach(object => console.log(object.name)); 
 }
 console.log(checkLowStock);
+
+// Task 5: Create a Function to Calculate Total Inventory Value
+function calculateInventoryValue (inventory) {
+    let total = inventory.reduce ((i, product) => {
+        return i +(product.quantity * product.price)
+    },0);
+} // reduce method to calculate total value of all products
+console.log(`Total value of all products in stock is $${total}`);
 
