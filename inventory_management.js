@@ -46,3 +46,11 @@ function calculateInventoryValue (inventory) {
 } // reduce method to calculate total value of all products
 console.log(`Total value of all products in stock is $${total}`);
 
+//Task 6: Create a Function to Process a Sale
+
+function processSale(x) {
+    let productName = inventory.find(object=>object.name===x)
+    if (!product.name)
+        return (`The product is not in the inventory`);
+    else{return updateStock} console.log(`Updated Stock: ${updateStock}`);
+} // finds product in inventory, if product is not found displays a message, if it is found then displays the updated stock
