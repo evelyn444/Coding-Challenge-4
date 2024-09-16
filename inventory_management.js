@@ -30,3 +30,11 @@ else if (leftoverStock <= product.lowStockLevel)
     return(`${product.name} Has low stock`); // returning low stock or out of stock for a product
 }
 console.log(updateStock (`Blush`, 2)); // checking with product "Blush"
+
+//Task 4: Create a Function to Check Low Stock Products
+function checkLowStock () {
+    let currentinventory = inventory.filter (product => product.quantity <= product.lowStockLevel);
+    currentinventory.forEach(object => console.log(object.name));
+}
+console.log(checkLowStock);
+
